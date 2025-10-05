@@ -37,7 +37,7 @@ const Result = () => {
 
       const likedIds = data.liked_location_ids || [];
       const profileType = calculateProfile(likedIds);
-      
+
       // Update profile type in database
       await supabase
         .from("game_sessions")
@@ -45,13 +45,13 @@ const Result = () => {
         .eq("id", sessionId);
 
       setProfile(profiles[profileType as keyof typeof profiles]);
-      
+
       // Get top 3 liked locations
       const topLocs = likedIds
         .slice(0, 3)
-        .map((id: number) => locations.find(loc => loc.id === id))
+        .map((id: number) => locations.find((loc) => loc.id === id))
         .filter(Boolean);
-      
+
       setTopLocations(topLocs);
     } catch (error) {
       console.error("Error loading results:", error);
@@ -63,7 +63,7 @@ const Result = () => {
 
   const handleShare = () => {
     const shareUrl = `${window.location.origin}/play?ref=${sessionId}`;
-    
+
     if (navigator.share) {
       navigator.share({
         title: "Find your Diani vibe!",
@@ -89,20 +89,22 @@ const Result = () => {
       <div className="max-w-2xl mx-auto">
         <Card className="p-8 text-center shadow-tropical animate-fade-in">
           <div className="text-6xl mb-4">{profile?.emoji}</div>
-          
+
           <h1 className="text-3xl font-bold mb-2">
             Your Diani Adventure Profile:
           </h1>
           <h2 className="text-4xl font-bold bg-gradient-ocean bg-clip-text text-transparent mb-4">
             {profile?.name}
           </h2>
-          
+
           <p className="text-lg text-muted-foreground mb-8">
             {profile?.description}
           </p>
 
           <div className="mb-8">
-            <h3 className="text-xl font-semibold mb-4">Your Top Loved Spots:</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              Your Top Loved Spots:
+            </h3>
             <div className="grid gap-4">
               {topLocations.map((location) => (
                 <div
@@ -134,7 +136,22 @@ const Result = () => {
               <Share2 className="mr-2 h-5 w-5" />
               Share with a Friend
             </Button>
-            
+
+            <div className="space-y-4">
+              <a
+                href="https://wa.me/254757484013?text=Hi%20there!%20I%20just%20played%20the%20Diani%20Vibe%20Game%20and%20want%20to%20plan%20a%20trip%20together!%20✈️🌴"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-ocean hover:opacity-90 transition-all text-lg"
+                >
+                  Plan your trip together ✈️
+                </Button>
+              </a>
+            </div>
+
             <p className="text-sm text-muted-foreground">
               💘 Share your game and see if you're a perfect Diani duo!
             </p>
@@ -151,7 +168,8 @@ const Result = () => {
         </Card>
 
         <p className="text-center mt-6 text-foreground/70 italic">
-          "Your vibe is pure paradise 🌺 — let's see who matches your Diani energy!"
+          "Your vibe is pure paradise 🌺 — let's see who matches your Diani
+          energy!"
         </p>
       </div>
     </div>
