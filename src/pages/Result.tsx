@@ -112,7 +112,7 @@ const Result = () => {
                   className="flex items-center gap-4 p-4 bg-muted rounded-2xl"
                 >
                   <img
-                    src={`/src/assets/${location.image}`}
+                    src={`/images/${location.image}`}
                     alt={location.name}
                     className="w-20 h-20 rounded-xl object-cover"
                   />
@@ -147,7 +147,7 @@ const Result = () => {
                   size="lg"
                   className="w-full bg-gradient-ocean hover:opacity-90 transition-all text-lg"
                 >
-                  Plan your trip together ✈️
+                  Plan your trip ✈️
                 </Button>
               </a>
             </div>

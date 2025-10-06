@@ -15,7 +15,9 @@ const Play = () => {
   const [currentRound, setCurrentRound] = useState(0);
   const [likedLocations, setLikedLocations] = useState<number[]>([]);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [animationType, setAnimationType] = useState<"love" | "skip" | null>(null);
+  const [animationType, setAnimationType] = useState<"love" | "skip" | null>(
+    null
+  );
 
   const totalRounds = 15;
   const currentLocation = gameLocations[currentRound];
@@ -39,10 +41,10 @@ const Play = () => {
     setTimeout(async () => {
       if (currentRound + 1 >= totalRounds) {
         // Game complete - save results and navigate to result
-        const updatedLikes = liked 
-          ? [...likedLocations, currentLocation.id] 
+        const updatedLikes = liked
+          ? [...likedLocations, currentLocation.id]
           : likedLocations;
-        
+
         try {
           const { data, error } = await supabase
             .from("game_sessions")
@@ -85,11 +87,11 @@ const Play = () => {
     <div className="min-h-screen bg-gradient-beach py-8 px-4">
       <div className="max-w-2xl mx-auto">
         <ProgressBar current={currentRound + 1} total={totalRounds} />
-        
+
         <LocationCard
           name={currentLocation.name}
           description={currentLocation.description}
-          image={`/src/assets/${currentLocation.image}`}
+          image={`/images/${currentLocation.image}`}
           onLove={() => handleChoice(true)}
           onSkip={() => handleChoice(false)}
           isAnimating={isAnimating}
