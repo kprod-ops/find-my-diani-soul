@@ -55,8 +55,10 @@ const Match = () => {
         .filter(Boolean)
         .slice(0, 3);
 
-      const referrerProfile = profiles[referrer.profile_type as keyof typeof profiles];
-      const friendProfile = profiles[friend.profile_type as keyof typeof profiles];
+      const referrerProfile =
+        profiles[referrer.profile_type as keyof typeof profiles];
+      const friendProfile =
+        profiles[friend.profile_type as keyof typeof profiles];
 
       setMatchData({
         matchPercentage,
@@ -75,7 +77,9 @@ const Match = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-beach">
-        <p className="text-lg text-muted-foreground">Calculating your match...</p>
+        <p className="text-lg text-muted-foreground">
+          Calculating your match...
+        </p>
       </div>
     );
   }
@@ -114,15 +118,23 @@ const Match = () => {
 
           <div className="flex justify-center gap-4 mb-6">
             <div className="text-center">
-              <div className="text-4xl mb-2">{matchData?.referrerProfile?.emoji}</div>
-              <p className="text-sm font-medium">{matchData?.referrerProfile?.name}</p>
+              <div className="text-4xl mb-2">
+                {matchData?.referrerProfile?.emoji}
+              </div>
+              <p className="text-sm font-medium">
+                {matchData?.referrerProfile?.name}
+              </p>
             </div>
             <div className="flex items-center">
               <Heart className="h-8 w-8 text-accent" />
             </div>
             <div className="text-center">
-              <div className="text-4xl mb-2">{matchData?.friendProfile?.emoji}</div>
-              <p className="text-sm font-medium">{matchData?.friendProfile?.name}</p>
+              <div className="text-4xl mb-2">
+                {matchData?.friendProfile?.emoji}
+              </div>
+              <p className="text-sm font-medium">
+                {matchData?.friendProfile?.name}
+              </p>
             </div>
           </div>
 
@@ -136,7 +148,7 @@ const Match = () => {
                     className="flex items-center gap-3 p-3 bg-muted rounded-xl"
                   >
                     <img
-                      src={`/src/assets/${location.image}`}
+                      src={`/images/${location.image}`}
                       alt={location.name}
                       className="w-12 h-12 rounded-lg object-cover"
                     />
