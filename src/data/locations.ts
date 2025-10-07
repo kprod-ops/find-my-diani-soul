@@ -11,35 +11,35 @@ export const locations: Location[] = [
     id: 1,
     name: "Diani Beach",
     description: "Pristine white sands and turquoise waters perfect for sun lovers.",
-    image: "location-beach.jpg",
+    image: "diani.jpg",
     tags: ["beach", "relax"]
   },
   {
     id: 2,
     name: "Nomad Café",
     description: "Chill beachside café for sunsets and smoothies.",
-    image: "location-cafe.jpg",
+    image: "nomad.jpg",
     tags: ["food", "relax"]
   },
   {
     id: 3,
     name: "Kite Beach",
     description: "Thrilling water sports and adrenaline-pumping adventures await.",
-    image: "location-watersports.jpg",
+    image: "kite.jpg",
     tags: ["adventure", "active"]
   },
   {
     id: 4,
     name: "Leopard Beach Resort",
     description: "Luxurious poolside relaxation in a tropical paradise.",
-    image: "location-resort.jpg",
+    image: "leopard.jpg",
     tags: ["luxury", "relax"]
   },
   {
     id: 5,
     name: "Ukunda Market",
     description: "Colorful local market buzzing with authentic Kenyan culture.",
-    image: "location-market.jpg",
+    image: "ukunda.jpg",
     tags: ["culture", "explore"]
   },
   {
@@ -53,49 +53,49 @@ export const locations: Location[] = [
     id: 7,
     name: "Colobus Trail",
     description: "Peaceful jungle walk through lush tropical nature.",
-    image: "location-nature.jpg",
+    image: "colobus.jpg",
     tags: ["nature", "explore"]
   },
   {
     id: 8,
     name: "Tiwi Beach",
     description: "Secluded paradise for quiet moments and contemplation.",
-    image: "location-beach.jpg",
+    image: "tiwi.jpg",
     tags: ["beach", "relax"]
   },
   {
     id: 9,
     name: "Ali Barbour's Cave",
     description: "Unique dining experience in a natural coral cave.",
-    image: "location-cafe.jpg",
+    image: "ali.jpg",
     tags: ["food", "unique"]
   },
   {
     id: 10,
     name: "Shimba Hills",
     description: "Wildlife encounters and stunning hilltop vistas.",
-    image: "location-nature.jpg",
+    image: "shimba.png",
     tags: ["nature", "adventure"]
   },
   {
     id: 11,
     name: "Forty Thieves Beach Bar",
     description: "Vibrant beach parties and cocktails with a view.",
-    image: "location-cafe.jpg",
+    image: "thieves.jpg",
     tags: ["food", "social"]
   },
   {
     id: 12,
     name: "Diving Center",
     description: "Explore underwater coral reefs and marine life.",
-    image: "location-watersports.jpg",
+    image: "scuba.jpeg",
     tags: ["adventure", "active"]
   },
   {
     id: 13,
     name: "Mwaluganje Sanctuary",
     description: "Elephant watching in protected natural habitat.",
-    image: "location-nature.jpg",
+    image: "elephant.jpg",
     tags: ["nature", "culture"]
   },
   {
@@ -109,7 +109,7 @@ export const locations: Location[] = [
     id: 15,
     name: "Galu Beach",
     description: "Serene stretch perfect for long romantic walks.",
-    image: "location-sunset.jpg",
+    image: "galu.jpg",
     tags: ["romance", "beach"]
   }
 ];
